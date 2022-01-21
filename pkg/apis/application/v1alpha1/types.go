@@ -559,6 +559,10 @@ type ApplicationStatus struct {
 	Summary ApplicationSummary `json:"summary,omitempty" protobuf:"bytes,10,opt,name=summary"`
 }
 
+func (a *ApplicationStatus) IsZero() bool {
+	return true
+}
+
 // JWTTokens represents a list of JWT tokens
 type JWTTokens struct {
 	Items []JWTToken `json:"items,omitempty" protobuf:"bytes,1,opt,name=items"`
